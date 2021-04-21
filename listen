@@ -1,0 +1,46 @@
+def start(liste):
+    print("Valg: 1")
+    print("Valg: 2")
+    print("Valg: 3")
+    print("Valg: 4")
+    
+    print(liste)
+    
+    mine_valg = ['1', '2', '3', '4'] # > 5: "Forkert indtast"
+    valg = min_liste(mine_valg)
+    
+    if valg == '1':
+        print("Valg 1")
+        liste.append("Valg 1")
+        start(liste)
+        
+    elif valg == '2':
+        print("Valg 2")
+        liste.append("Valg 2")
+        start(liste)
+    
+    elif valg == '3':
+        print("Valg 3")
+        liste.append("Valg 3")
+        start(liste)
+    
+    elif valg == '4':
+        print("Valg 4")
+        liste.append("Valg 4")
+        start(liste)
+        
+
+def min_liste(mine_valg):
+    
+    valg = input(">\n") # alt + option + 7 = \
+    
+    if valg in mine_valg:
+        return valg
+    elif valg == 'q':
+        exit(0)
+    else:
+        print("Forkert indtast")
+        return min_liste(mine_valg)
+        
+liste = [] # option + 8 og/el 9 = []
+start(liste)
